@@ -22,8 +22,8 @@ El objetivo es encontrar todos los pares de cartas en el menor tiempo posible, g
   - Difícil (15 vidas)
 
 - Sistema de vidas dinámico:
-  - Pierdes vidas al fallar
-  - Ganas vidas al acertar
+  - -1 vida al fallar
+  - +1 vida al acertar
 
 - Temporizador con bonus:
   - +5 segundos por cada acierto
@@ -45,7 +45,7 @@ El objetivo es encontrar todos los pares de cartas en el menor tiempo posible, g
 
 ---
 
-## ecnologías usadas
+## Tecnologías usadas
 
 - HTML5
 - CSS3 (Flexbox + Grid + Animaciones)
@@ -54,7 +54,7 @@ El objetivo es encontrar todos los pares de cartas en el menor tiempo posible, g
 ---
 
 ## Estructura del proyecto
-
+```
 /neon-memory
 │
 ├── index.html → Estructura del juego
