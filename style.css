@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #05010a;
+    color: #00f5ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-top: 15px;
+}
+
+header h1 {
+    font-size: 40px;
+    text-shadow: 0 0 10px #00f5ff;
+}
+
+.hud {
+    display: flex;
+    gap: 15px;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.controls button {
+    margin: 5px;
+    background: transparent;
+    border: 1px solid #00f5ff;
+    color: #00f5ff;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#game {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    width: clamp(40px, 12vw, 70px);
+    height: clamp(40px, 12vw, 70px);
+    background: #0a0a1a;
+    border: 1px solid #00f5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(16px, 4vw, 26px);
+    cursor: pointer;
+}
+
+.card.revealed {
+    background: #00f5ff;
+    color: #05010a;
+}
+
+/* LOG */
+#log {
+    margin-top: 20px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.log-item {
+    font-size: clamp(20px, 5vw, 34px);
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: rgba(0, 255, 120, 0.15);
+    border: 2px solid #00ff7b;
+    color: #00ff7b;
+    text-shadow: 0 0 10px #00ff7b, 0 0 20px #00ff7b;
+    box-shadow: 0 0 15px rgba(0, 255, 123, 0.4);
+    animation: popReward 1.8s ease forwards;
+}
+
+@keyframes popReward {
+    0% {
+        opacity: 0;
+        transform: scale(0.6) translateY(20px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.9) translateY(-10px);
+    }
+}
+
+/* PARTICULAS */
+.particle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: #00ff7b;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 10px #00ff7b;
+    animation: particleMove 800ms ease-out forwards;
+}
+
+@keyframes particleMove {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) scale(0.3);
+    }
+}

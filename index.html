@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Memory</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>NEON MEMORY</h1>
+        <p>Encuentra los pares</p>
+    </header>
+
+    <div class="hud">
+        <span id="score">Score: 0</span>
+        <span id="lives">Vidas: 0</span>
+        <span id="timer">Tiempo: 0</span>
+    </div>
+
+    <div class="controls">
+        <button onclick="setDifficulty(4)">Fácil</button>
+        <button onclick="setDifficulty(6)">Medio</button>
+        <button onclick="setDifficulty(8)">Difícil</button>
+    </div>
+
+    <div id="game"></div>
+
+    <div id="log"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
